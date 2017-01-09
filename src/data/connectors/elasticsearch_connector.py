@@ -16,9 +16,9 @@ class ESConnector():
         url = '{}{}'.format(self.URL_PREFIX, search_url)
         return requests.get(url=url, auth=self.AUTH, verify=False, json=json_data).json()
 
-    def post_response(self, post_url=None, json_data=None, headers=None):
+    def post_data_response(self, post_url=None, data=None, headers=None):
         url = '{}{}'.format(self.URL_PREFIX, post_url)
-        return requests.post(url=url, auth=self.AUTH, verify=False, json=json_data, headers=headers)
+        return requests.post(url=url, auth=self.AUTH, verify=False, data=data, headers=headers)
 
     @staticmethod
     def raise_search_error(search, error_msg=None):
