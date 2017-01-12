@@ -1,2 +1,5 @@
 .DS_Store
 .pyc
+src/Backup
+src/OLD
+tmp.py
